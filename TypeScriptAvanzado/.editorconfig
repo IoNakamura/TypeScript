@@ -1,0 +1,64 @@
+# Editor configuration, see https://editorconfig.org
+root = true
+
+# Configuración global para todos los archivos
+[*]
+charset = utf-8                    # Codificación UTF-8 para soporte de caracteres especiales y emojis
+indent_style = space              # Espacios en lugar de tabs para mejor consistencia entre IDEs
+indent_size = 2                   # 2 espacios: estándar en proyectos TypeScript/Node.js
+insert_final_newline = true       # Nueva línea al final: evita problemas con git diff
+trim_trailing_whitespace = true   # Elimina espacios innecesarios al final de las líneas
+end_of_line = lf                  # LF para compatibilidad cross-platform (Windows/Unix/Mac)
+
+# Configuración para archivos TypeScript/JavaScript
+[*.{ts,tsx,js,jsx}]
+quote_type = single               # Comillas simples: estándar en TypeScript y más fácil de escribir
+max_line_length = 100            # Límite de 100 caracteres: mejora la legibilidad en pantallas divididas
+
+# Configuración para archivos de datos y configuración
+[*.{json,yml,yaml}]
+indent_size = 2                   # 2 espacios: consistente con la configuración de TypeScript
+
+# Configuración para documentación Markdown
+[*.md]
+max_line_length = off            # Sin límite: necesario para tablas y bloques de código
+trim_trailing_whitespace = false # Preserva espacios: necesario para formato Markdown y listas
+
+# Configuración para archivos de estilos
+[*.{css,scss,less}]
+indent_size = 2                   # 2 espacios: consistente con el resto del proyecto
+
+# Configuración para archivos Gherkin (Cucumber)
+[*.feature]
+indent_size = 2                   # 2 espacios: mejora la legibilidad de escenarios
+max_line_length = off            # Sin límite: necesario para escenarios largos y tablas de datos
+
+# Configuración para archivos de prueba Playwright
+[*.{spec,test}.{ts,tsx,js,jsx}]
+indent_size = 2                   # 2 espacios: consistente con el código fuente
+max_line_length = 120            # 120 caracteres: permite aserciones largas y descripciones detalladas
+
+# Configuración para archivos de configuración
+[*.config.{ts,js}]
+indent_size = 2                   # 2 espacios: consistente con el resto del proyecto
+max_line_length = 100            # 100 caracteres: mantiene la legibilidad en configuraciones complejas
+
+# Configuración para Page Objects de Playwright
+[**/pages/*.ts]
+indent_size = 2                   # 2 espacios: consistente con el patrón Page Object Model
+max_line_length = 100            # 100 caracteres: adecuado para selectores y métodos de página
+
+# Configuración para datos de prueba (fixtures)
+[**/fixtures/*.ts]
+indent_size = 2                   # 2 espacios: consistente con la estructura de datos
+max_line_length = 100            # 100 caracteres: suficiente para datos de prueba estructurados
+
+# Configuración para utilidades y helpers
+[**/utils/*.ts]
+indent_size = 2                   # 2 espacios: consistente con funciones utilitarias
+max_line_length = 100            # 100 caracteres: adecuado para funciones helper reutilizables
+
+# Configuración para definiciones de tipos TypeScript
+[**/types/*.ts]
+indent_size = 2                   # 2 espacios: consistente con definiciones de tipos
+max_line_length = 100            # 100 caracteres: suficiente para interfaces y tipos complejos

@@ -46,12 +46,6 @@ npx ts-node .\<archivo>.ts
 - **src/types/**: Definiciones de tipos personalizados, enums, tuples, never, unknown, etc.
 - **src/demo.ts**: Archivo demo para probar funcionalidades.
 
-## Requisitos
-
-- Node.js con npm
-- TypeScript (verifica con `tsc --version`)
-- ts-node (para ejecución directa de archivos TypeScript)
-
 ## Compilación y Ejecución
 
 Para compilar los proyectos, ubícate en la carpeta respectiva y ejecuta:
